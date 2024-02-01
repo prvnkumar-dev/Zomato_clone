@@ -1,0 +1,48 @@
+//HOMEPAGE API START
+
+GET/Get-Location-List
+GET/Get-restaurent-List-By-location-id
+GET/Get-meal-type-List
+POST/create-user-account 
+POST/user-login
+
+//HOMEPAGE API END
+
+//SINGLE RESTAURENT DETAIL PAGE START
+
+GET/Get-restaurent-Details-by-id
+GET/Get-menu-items-by-restaurent-id
+
+//SINGLE RESTAURENT DETAIL PAGE END
+
+//PAYMENT API START
+
+POST/create-order-id 
+POST/verify-Payment 
+POST/save-user-order 
+
+//PAYMENT API END
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+LOCATION:{
+    GET/Get-Location-List
+
+}
+RESTAURENT:{
+    GET/Get-restaurent-List-By-location-id
+    GET/Get-restaurent-Details-by-id
+}
+MENU ITEMS:{
+    GET/Get-menu-items-by-restaurent-id
+}
+MEALTYPE:{
+    GET/Get-meal-type-List
+}
+USER AREA:{
+    POST/create-user-account 
+POST/user-login
+}
+ORDER:{
+    POST/save-user-order 
+
+}
