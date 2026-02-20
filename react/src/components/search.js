@@ -20,12 +20,12 @@ const Search=()=>{
     // })
     let [LocationList,SetlocationList]=useState([]);
     let  GetLocationDetails=async ()=>{
-        let URL=`http://localhost:3030/api/Get-Location-List`;
+        let URL=`https://zomato-clone-txds.onrender.com/api/Get-Location-List`;
         let {data}=await axios.get(URL);
         SetlocationList(data.LocationResult);
     }
     let Filterdata=async ()=>{
-        let URL=`http://localhost:3030/api/filter`;
+        let URL=`https://zomato-clone-txds.onrender.com/api/filter`;
         let {data}=await axios.post(URL,{...filterItems});
         SetFilterResult(data.Pagedetails);
         SetNoOfpage(data.page)

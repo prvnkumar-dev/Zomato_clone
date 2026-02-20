@@ -13,7 +13,7 @@ const RestaurentPage=()=>{
 
     let GetRestaurentDetails=async ()=>{
         try{
-        let URL=`http://localhost:3030/api/Get-restaurent-Details-by-id/${id}`;
+        let URL=`https://zomato-clone-txds.onrender.com/api/Get-restaurent-Details-by-id/${id}`;
         // let response=await fetch(URL,{method:"GET"});
         // let data=await response.json();
         let {data}=await axios.get(URL);
@@ -24,7 +24,7 @@ const RestaurentPage=()=>{
     }
 }
 const GetMenuItems=async ()=>{
-    let URL=`http://localhost:3030/api/Get-menu-items-by-restaurent-id/${id}`;
+    let URL=`https://zomato-clone-txds.onrender.com/api/Get-menu-items-by-restaurent-id/${id}`;
     let response=await fetch(URL,{method:"GET"});
     let data=await response.json();
     SetMenuItems(data.MenuItemResult);
@@ -43,7 +43,7 @@ const DecreaseMenu=(index)=>{
     SetMenuItems([...MenuItems]);
 }
 const MakePayment=async ()=>{
-    let URL=`http://localhost:3030/api/Create-order-id`;
+    let URL=`https://zomato-clone-txds.onrender.com/api/Create-order-id`;
     let {data}=await axios.post(URL,{Amount:Totalprice});
     let {order}=data;
    var options = {
@@ -65,7 +65,7 @@ const MakePayment=async ()=>{
            };
         
         try {
-               let URL=`http://localhost:3030/api/verify-payment`;
+               let URL=`https://zomato-clone-txds.onrender.com/api/verify-payment`;
                let {data}=await axios.post(URL,SendPaymentDetail);
                if(data.status==true){
                 alert("Payment was Succesfull,Order Was saved");

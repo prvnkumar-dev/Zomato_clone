@@ -16,7 +16,7 @@ const FormModal=({res})=>{
     let [loginResult,SetLoginesult]=useState("");
     const [passwordType,setPasswordType]=useState("password");
     const CreateNewUser=async ()=>{
-        let URL=`http://localhost:3030/api/create-user-account`;
+        let URL=`https://zomato-clone-txds.onrender.com/api/create-user-account`;
         let {data}=await axios.post(URL,NewUser);
         if(data.status==true){
             alert(data.messege);
@@ -27,7 +27,7 @@ const FormModal=({res})=>{
         }
     }
     const LoginUser=async ()=>{
-        let URL=`http://localhost:3030/api/user-login`;
+        let URL=`https://zomato-clone-txds.onrender.com/api/user-login`;
         let {data}=await axios.post(URL,{...Login});
         if(data){
           alert(data.messege);
