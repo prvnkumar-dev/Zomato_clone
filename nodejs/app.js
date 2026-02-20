@@ -7,7 +7,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 const Approuter=require("./Approuters/Approuter");
 const PORT=3030;
-const URL="mongodb://localhost:27017/Restaurent";
+const URL="mongodb+srv://admin:praveen7979@edureka-fullstack.br1bbet.mongodb.net/Restaurent";
  app.use("/api",Approuter);
 mongoose.connect(URL).then(()=>{
     app.listen(PORT,()=>{
