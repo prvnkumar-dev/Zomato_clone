@@ -8,6 +8,11 @@ app.use(express.urlencoded({extended:false}));
 const Approuter=require("./Approuters/Approuter");
 const PORT=3030;
 const URL="mongodb+srv://admin:praveen7979@edureka-fullstack.br1bbet.mongodb.net/Restaurent";
+app.get("/health",(req,res)=>{
+    res.status(200).json({
+        "status":"Server is running"
+    })
+})
  app.use("/api",Approuter);
 mongoose.connect(URL).then(()=>{
     app.listen(PORT,()=>{
